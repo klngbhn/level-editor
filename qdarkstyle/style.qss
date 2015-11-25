@@ -1,38 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1029</width>
-    <height>727</height>
-   </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="windowTitle">
-   <string>Level Editor</string>
-  </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">/*
+/*
  * The MIT License (MIT)
  *
- * Copyright (c) &lt;2013-2014&gt; &lt;Colin Duquesnoy&gt;
+ * Copyright (c) <2013-2014> <Colin Duquesnoy>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the &quot;Software&quot;), to deal
+ * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
@@ -41,7 +13,7 @@
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
 
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -602,7 +574,7 @@ QFrame
     border: 1px solid #444;
 }
 
-QFrame[frameShape=&quot;0&quot;]
+QFrame[frameShape="0"]
 {
     border-radius: 2px;
     border: 1px transparent #444;
@@ -1059,13 +1031,13 @@ QToolButton {
     padding: 3px;
 }
 
-QToolButton[popupMode=&quot;1&quot;] { /* only for MenuButtonPopup */
+QToolButton[popupMode="1"] { /* only for MenuButtonPopup */
  padding-right: 20px; /* make way for the popup button */
  border: 1px transparent #4A4949;
  border-radius: 5px;
 }
 
-QToolButton[popupMode=&quot;2&quot;] { /* only for InstantPopup */
+QToolButton[popupMode="2"] { /* only for InstantPopup */
  padding-right: 10px; /* make way for the popup button */
  border: 1px transparent #4A4949;
 }
@@ -1223,7 +1195,7 @@ QStatusBar::item {
  }
 
 
-QFrame[height=&quot;3&quot;], QFrame[width=&quot;3&quot;] {
+QFrame[height="3"], QFrame[width="3"] {
     background-color: #444;
 }
 
@@ -1243,428 +1215,4 @@ QSplitter::handle:horizontal {
 
 QSplitter::handle:vertical {
     height: 1px;
-}</string>
-  </property>
-  <widget class="QWidget" name="centralWidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayoutScene">
-      <item>
-       <widget class="QLabel" name="labelScene">
-        <property name="text">
-         <string>Scene</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QGraphicsView" name="graphicsViewScene"/>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionNew"/>
-   <addaction name="actionSave"/>
-   <addaction name="actionOpen"/>
-   <addaction name="separator"/>
-   <addaction name="actionPlay"/>
-   <addaction name="actionStop"/>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1029</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuFile">
-    <property name="title">
-     <string>File</string>
-    </property>
-    <addaction name="actionNew"/>
-    <addaction name="separator"/>
-    <addaction name="actionOpen"/>
-    <addaction name="actionExit"/>
-   </widget>
-   <widget class="QMenu" name="menuEdit">
-    <property name="title">
-     <string>Edit</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuWindow">
-    <property name="title">
-     <string>Window</string>
-    </property>
-    <addaction name="actionAssets_View"/>
-    <addaction name="actionOutline"/>
-    <addaction name="actionDetails_View"/>
-    <addaction name="actionOutput_Log"/>
-   </widget>
-   <widget class="QMenu" name="menuHelp">
-    <property name="title">
-     <string>Help</string>
-    </property>
-    <addaction name="actionDocumentation"/>
-    <addaction name="actionAbout"/>
-   </widget>
-   <addaction name="menuFile"/>
-   <addaction name="menuEdit"/>
-   <addaction name="menuWindow"/>
-   <addaction name="menuHelp"/>
-  </widget>
-  <widget class="QDockWidget" name="dockWidgetAssets">
-   <attribute name="dockWidgetArea">
-    <number>1</number>
-   </attribute>
-   <widget class="QWidget" name="dockWidgetContentsAssets">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="labelAssets">
-       <property name="text">
-        <string>Assets</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTreeWidget" name="treeWidgetAssets">
-       <column>
-        <property name="text">
-         <string>Files</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QDockWidget" name="dockWidgetOutput">
-   <attribute name="dockWidgetArea">
-    <number>8</number>
-   </attribute>
-   <widget class="QWidget" name="dockWidgetContentsOutput">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="labelOutput">
-       <property name="text">
-        <string>Output Log</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEditOutput"/>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QDockWidget" name="dockWidgetDetails">
-   <attribute name="dockWidgetArea">
-    <number>2</number>
-   </attribute>
-   <widget class="QWidget" name="dockWidgetContentsDetails">
-    <layout class="QVBoxLayout" name="verticalLayout_4">
-     <item>
-      <widget class="QLabel" name="labelDetails">
-       <property name="text">
-        <string>Details</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="tableWidgetDetails"/>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QDockWidget" name="dockWidgetOutline">
-   <attribute name="dockWidgetArea">
-    <number>1</number>
-   </attribute>
-   <widget class="QWidget" name="dockWidgetContentsOutline">
-    <layout class="QVBoxLayout" name="verticalLayout_5">
-     <item>
-      <widget class="QLabel" name="labelOutline">
-       <property name="text">
-        <string>Outline</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTreeWidget" name="treeWidgetOutline">
-       <column>
-        <property name="text">
-         <string>Entities</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <action name="actionNew">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/document-new.svg</normaloff>:/icons/icons/document-new.svg</iconset>
-   </property>
-   <property name="text">
-    <string>New</string>
-   </property>
-  </action>
-  <action name="actionOpen">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/fileopen.svg</normaloff>:/icons/icons/fileopen.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Open</string>
-   </property>
-  </action>
-  <action name="actionExit">
-   <property name="text">
-    <string>Exit</string>
-   </property>
-  </action>
-  <action name="actionCreateEntity">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/list-add.svg</normaloff>:/icons/icons/list-add.svg</iconset>
-   </property>
-   <property name="text">
-    <string>CreateEntity</string>
-   </property>
-   <property name="toolTip">
-    <string>Create new Entity</string>
-   </property>
-  </action>
-  <action name="actionPlay">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/media-playback-start.svg</normaloff>:/icons/icons/media-playback-start.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Play</string>
-   </property>
-   <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Play the scene in game&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </action>
-  <action name="actionStop">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/media-playback-stop.svg</normaloff>:/icons/icons/media-playback-stop.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Stop</string>
-   </property>
-  </action>
-  <action name="actionSave">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/icons/icons/document-save.png</normaloff>:/icons/icons/document-save.png</iconset>
-   </property>
-   <property name="text">
-    <string>Save</string>
-   </property>
-  </action>
-  <action name="actionAssets_View">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Assets View</string>
-   </property>
-  </action>
-  <action name="actionOutline">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Outline</string>
-   </property>
-  </action>
-  <action name="actionDetails_View">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Details View</string>
-   </property>
-  </action>
-  <action name="actionOutput_Log">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Output Log</string>
-   </property>
-  </action>
-  <action name="actionDocumentation">
-   <property name="text">
-    <string>Documentation</string>
-   </property>
-  </action>
-  <action name="actionAbout">
-   <property name="text">
-    <string>About</string>
-   </property>
-  </action>
- </widget>
- <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
- <connections>
-  <connection>
-   <sender>actionAssets_View</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dockWidgetAssets</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>136</x>
-     <y>159</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionDetails_View</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dockWidgetDetails</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>891</x>
-     <y>305</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionOutline</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dockWidgetOutline</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>136</x>
-     <y>426</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionOutput_Log</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dockWidgetOutput</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>514</x>
-     <y>625</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dockWidgetAssets</sender>
-   <signal>visibilityChanged(bool)</signal>
-   <receiver>actionAssets_View</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>136</x>
-     <y>185</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dockWidgetDetails</sender>
-   <signal>visibilityChanged(bool)</signal>
-   <receiver>actionDetails_View</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>891</x>
-     <y>305</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dockWidgetOutline</sender>
-   <signal>visibilityChanged(bool)</signal>
-   <receiver>actionOutline</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>136</x>
-     <y>426</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dockWidgetOutput</sender>
-   <signal>visibilityChanged(bool)</signal>
-   <receiver>actionOutput_Log</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>514</x>
-     <y>625</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
-</ui>
+}

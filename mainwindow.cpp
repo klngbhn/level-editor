@@ -12,3 +12,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::openAboutWindow()
+{
+    about = new Ui::AboutWindow();
+
+}
